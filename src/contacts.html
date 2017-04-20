@@ -34,6 +34,72 @@
             </div>
         </div>
     </header>
+    <main>
+        <div class="iframe--section ">
+            <div class="overlay" onClick="style.pointerEvents='none'"></div>
+            <iframe class="my-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d41423.00278154426!2d25.6198933!3d49.5423284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1492669285194" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="container">
+            <h2 class="h2-contacts">Контакти</h2>
+            <div class="row contacts--row">
+                <div class="col-md-4">
+                    <div class="section--contacts">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat?</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="section--contacts">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat?</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="section--contacts">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat?</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="social--footer social--icon-contacts">
+                <li class="facebookli"><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#" class="vk"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                <li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="form--section">
+            <div class="container">
+                <div class="form">
+                    <form id="application" name="form">
+                        <br style="clear:both">
+                        <div class="input--form-group">
+                            <div class="form-group formSubscribeInput">
+                                <label for="applicationName">ІМ'Я <span class="req-symbol">*</span></label>
+                                <input type= "text" name= "name" id="applicationName" class="form-control rfield" required="required">
+                            </div>
+                            <div class="form-group formSubscribeInput">
+                                <label for="applicationEmail">EMAIL <span class="req-symbol">*</span></label>
+                                <input type= "text" name= "email" id="applicationEmail" class="form-control input__email rfield" required="required">
+                            </div>
+                            <div class="form-group formSubscribeInputTelephone">
+                                <label for="applicationTelephone">ТЕЛЕФОН <span class="req-symbol">*</span></label>
+                                <input type="number" id="applicationTelephone" class="form-control input__telephone rfield" name="telephone"  required="required">
+                            </div>
+                        </div>
+                        <div class="form-group formSubscribeInputTextarea">
+                            <label for="applicationMessage">ПОВІДОМЛЕННЯ <span class="req-symbol">*</span></label>
+                            <textarea rows= "10" cols= "45" name= "message" class=" textareaInput rfield" form="application" id="applicationMessage"></textarea>
+                        </div>
+
+                        <div class="button__develop">
+                            <button id="btn" class="applicationButton button__Buy btnOrder feedback disabled" type="submit" form="application"> Відправити </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
 </div>
 <footer>
     <div class="footer--top">

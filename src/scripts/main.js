@@ -16,6 +16,86 @@ $(document).ready(function(){
 	});
 
 
+    //**sent form**//
+    $('#application').submit(function() {
+        $.ajax({
+            type: "POST",
+            url: "",
+            data: $(this).serialize()
+        }).done(function() {
+            toastr.success('Дякуємо за Ваше повідомлення \n Ми з Вами звяжемось як тільки це буде можливо!');
+            $("#application").get(0).reset();
+        });
+        return false;
+    });
+
+    // **form validation**//
+    (function( $ ){
+        $(function() {
+            $('#application').each(function(){
+                //oбявлення перемінної(форма і кнопка відправки)
+                var form = $(this),
+                    btn = form.find('#btn');
+                //додаємо кожному полю котре перевіряємо, вказуємо що поле пусте
+                form.find('.rfield').addClass('empty_field');
+                //функція провірки полів форми
+                function checkInput(){
+                    form.find('.rfield').each(function(){
+                        if($(this).val() != ''){
+                            //якщо поле не пусте то видаляємо клас-указание
+                            $(this).removeClass('empty_field');
+                        } else {
+                            // якщо поле пусте додаємо класс-указание
+                            $(this).addClass('empty_field');
+                        }
+                    });
+                }
+
+                // функція підсвідки незаповнених полів
+                function lightEmpty(){
+                    form.find('.empty_field').css({'border-color':'#d8512d'});
+                    // через півсекунди видаляємо підсвідку
+                    setTimeout(function(){
+                        form.find('.empty_field').removeAttr('style');
+                    },500);
+                }
+
+                // перевірка в режимі реального часу
+                setInterval(function(){
+                    //запускаємо функцію перевірки полів на заповненість
+                    checkInput();
+                    //рахуємо кількість незаповнених полів
+                    var sizeEmpty = form.find('.empty_field').size();
+                    // Вешаем условие-тригер на кнопку отправки формы
+                    if(sizeEmpty > 0){
+                        if(btn.hasClass('disabled')){
+                            return false
+                        } else {
+                            btn.addClass('disabled')
+                        }
+                    } else {
+                        btn.removeClass('disabled')
+                    }
+                },500);
+
+                // Событие клика по кнопке отправить
+                btn.click(function(){
+                    if($(this).hasClass('disabled')){
+                        // подсвечиваем незаполненные поля и форму не отправляем, если есть незаполненные поля
+                        lightEmpty();
+                        return false
+                    }
+                });
+            });
+        });
+
+    })( jQuery );
+
+
+
+
+
+
 
     //якщо буде потрібно якір//
     //**scroll menu**//
@@ -154,6 +234,32 @@ $(document).ready(function(){
         // "centerOnScroll" : false
     });
 
+    //**map disable scroll**//
+    // $('.my-map').click(function(){
+    //     $('iframe').css('pointer-events','auto');
+    // });
+
+    //**map disable scroll(метод накладання поверх прозорого діва і по кліку забираємо його)**//
+    $('.overlay').click(function() {
+        $(this).remove();
+    });
+    //** active color navbar header **//
+    // $('.navigate__header li').on('click', function(){
+    //     $('.navigate__header li a').each(function () {
+    //         $(this).addClass('active');
+    //     });
+    //     $(this).find('a').removeClass('active');
+    // });
+
+
+
+    $(function() {
+        $('.navigate__header li a').click(function() {
+            //e.preventDefault();
+            $(".navigate__header li a").removeClass('active');
+            $(this).addClass('active');
+        })
+    });
 });
 
 
