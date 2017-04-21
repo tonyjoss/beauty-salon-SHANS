@@ -82,6 +82,7 @@ gulp.task("html", function() {
 
 gulp.task('bower-js', function() {
 	return gulp.src([
+        "src/bower/slideout.js/dist/slideout.min.js",
         "src/bower/fancybox/dist/jquery.fancybox.min.js",
         "src/bower/jparallax/js/jquery.parallax.js",
 		"src/bower/bootstrap/dist/js/bootstrap.js",
@@ -94,7 +95,6 @@ gulp.task('bower-js', function() {
         "src/bower/jquery.easing/js/jquery.easing.js",
 		"src/bower/jquery.easing/js/jquery.easing.compatibility.js"
 
-
 	])
 	.pipe(addSrc.prepend("src/bower/jquery/dist/jquery.js"))
 	.pipe(concat('bower.min.js'))
@@ -104,7 +104,8 @@ gulp.task('bower-js', function() {
 
 gulp.task('main-js', function() {
 	return gulp.src([
-		"src/scripts/main.js"
+		"src/scripts/main.js",
+		"src/scrips/loader.js"
 	])
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())

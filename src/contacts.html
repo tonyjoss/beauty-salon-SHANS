@@ -16,13 +16,20 @@
     <header class="main-header">
         <div class="header-contents">
             <div class="container">
-                <div class="header-logo">
-                    <a href="#">
-                        <img src="images/logo.png" alt="">
-                    </a>
-                </div>
+                <!--<div class="header-logo">-->
+                    <!--<a href="#">-->
+                        <!--<img src="images/logo.png" alt="">-->
+                    <!--</a>-->
+                <!--</div>-->
                 <div class="menu-nav">
-                    <nav>
+                    <nav id="menu">
+                        <header>
+                            <div class="header-logo header-logo--mobile">
+                                <a href="#">
+                                    <img src="images/logo.png" alt="">
+                                </a>
+                            </div>
+                        </header>
                         <ul class="navigate__header">
                             <li><a class="cool-link" href="index.html">Головна</a></li>
                             <li><a class="cool-link" href="service.html">Сервіс</a></li>
@@ -34,7 +41,16 @@
             </div>
         </div>
     </header>
-    <main>
+    <main id="panel">
+        <header class="hidden-sm hidden-md hidden-lg panel--header">
+            <button class="toggle-button btn--open-mobile">☰</button>
+            <!--<h2>Panel</h2>-->
+            <div class="header-logo pull-right">
+                <a href="#">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+        </header>
         <div class="iframe--section ">
             <div class="overlay" onClick="style.pointerEvents='none'"></div>
             <iframe class="my-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d41423.00278154426!2d25.6198933!3d49.5423284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1492669285194" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -169,6 +185,20 @@
 </footer>
 <script src="js/bower.min.js"></script>
 <script src="js/main.min.js"></script>
+<!--<script>-->
+    <!--var slideout = new Slideout({-->
+        <!--'panel': document.getElementById('panel'),-->
+        <!--'menu': document.getElementById('menu'),-->
+        <!--'padding': 256,-->
+        <!--'tolerance': 70,-->
+        <!--'easing': 'cubic-bezier(.32,2,.55,.27)'-->
+    <!--});-->
+
+    <!--// Toggle button-->
+    <!--document.querySelector('.toggle-button').addEventListener('click', function() {-->
+        <!--slideout.toggle();-->
+    <!--});-->
+<!--</script>-->
 </body>
 </body>
 </html>

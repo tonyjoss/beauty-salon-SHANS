@@ -212,7 +212,7 @@ $(document).ready(function(){
             autoHover: true,
             slideWidth: 0,
             infiniteLoop: true,
-            hideControlOnEnd: false,
+            hideControlOnEnd: false
 
         });
         // slider.reloadSlider();
@@ -234,10 +234,6 @@ $(document).ready(function(){
         // "centerOnScroll" : false
     });
 
-    //**map disable scroll**//
-    // $('.my-map').click(function(){
-    //     $('iframe').css('pointer-events','auto');
-    // });
 
     //**map disable scroll(метод накладання поверх прозорого діва і по кліку забираємо його)**//
     $('.overlay').click(function() {
@@ -251,7 +247,33 @@ $(document).ready(function(){
     //     $(this).find('a').removeClass('active');
     // });
 
+    // var slideout = new Slideout({
+    //     'panel': document.getElementById('panel'),
+    //     'menu': document.getElementById('menu'),
+    //     'padding': 256,
+    //     'tolerance': 70,
+    //     'easing': 'cubic-bezier(.32,2,.55,.27)'
+    // });
+    //
+    // // Toggle button
+    // document.querySelector('.toggle-button').addEventListener('click', function() {
+    //     slideout.toggle();
+    // });
 
+    $(function() {
+        var slideout = new Slideout({
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('menu'),
+            'padding': 256,
+            'tolerance': 70,
+            'easing': 'cubic-bezier(.32,2,.55,.27)'
+        });
+
+        // Toggle button
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            slideout.toggle();
+        });
+    });
 
     $(function() {
         $('.navigate__header li a').click(function() {

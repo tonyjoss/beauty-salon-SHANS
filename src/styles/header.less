@@ -49,7 +49,8 @@ a.back-to-top:hover {
   //opacity: 0.3;
 }
 .main-header {
-  padding: 0 60px;
+  //padding: 0 60px;
+  max-height: 80px;
 }
 .header-contents {
   //display: table;
@@ -72,11 +73,17 @@ a.back-to-top:hover {
   //text-align: center;
   text-align: right;
   line-height: 80px;
+  //text-align: justify;
+}
+.navigate__header:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
 }
 .navigate__header li {
   display: inline-block;
   line-height: 30px;
-  margin: 0 50px;
+  padding: 0 15px;
 
 
 
@@ -191,3 +198,14 @@ a.back-to-top:hover {
   -webkit-transform: scaleX(1)!important;
   transform: scaleX(1)!important;
 }
+
+
+
+
+
+
+
+
+
+
+
