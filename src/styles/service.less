@@ -45,13 +45,20 @@
   color: #b69e59;
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
-  i {
-    transform: rotate(90deg);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-
-  }
+  font-family: 'theme-icons';
+  display: inline-block;
+  //&:hover {
+  //  //-webkit-transform: scale(1.2);
+  //  //-ms-transform: scale(1.2);
+  //  //transform: scale(1.2);
+  //  ////transform: rotate(90deg);
+  //  //-webkit-transition: all 0.3s ease-in-out 0s;
+  //  //transition: all 0.3s ease-in-out 0s;
+  //  ////font-size: 80px;
+  //  //color: inherit;
+  //}
 }
+
 .service__column-article {
   color: #000;
   font-family: 'Lato';
@@ -86,6 +93,12 @@
       //transform: scaleX(1.5);
       color: #7e807c;
       transform: rotate(45deg);
+    }
+    .haircut {
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+      transform: scale(1.2);
+      color: inherit;
     }
   }
 }

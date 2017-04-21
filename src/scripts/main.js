@@ -256,8 +256,13 @@ $(document).ready(function(){
     $(function() {
         $('.navigate__header li a').click(function() {
             //e.preventDefault();
-            $(".navigate__header li a").removeClass('active');
-            $(this).addClass('active');
+            // $(".navigate__header li a").removeClass('active');
+            // $(this).addClass('active');
+            $('.navigate__header li a').each(function() {
+                if (this.href == location.pathname) {
+                    $(this).addClass('active');
+                }
+            });
         })
     });
 });
