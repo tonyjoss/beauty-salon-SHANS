@@ -7,14 +7,12 @@ $(document).ready(function(){
             $('a.back-to-top').fadeOut('slow');
         }
     });
-
     $('a.back-to-top').click(function() {
 	    $('html,body').animate({
 	        scrollTop: 0
 	    }, 1000);
     		return false;
 	});
-
 
     //**sent form**//
     $('#application').submit(function() {
@@ -91,33 +89,6 @@ $(document).ready(function(){
 
     })( jQuery );
 
-
-
-
-
-
-
-    //якщо буде потрібно якір//
-    //**scroll menu**//
-    // $('a:not(.left, .right, .back-to-top)[href^="#"]').click(function(){
-    //     var el = $(this).attr('href');
-    //     $('body').animate({
-    //         scrollTop: $(el).offset().top}, 2000);
-    //     return false;
-    // });
-
-    //**paralax**//
-    // jQuery('.parallax-layer').parallax(
-    //     { mouseport: jQuery("#port") },
-    //     { xparallax: '100px',    yparallax: '100px'},
-    //     { xorigin: 'center', yorigin: 'center'},
-    //     { frameDuration: '1000s'}
-    // );
-
-    // $('#scene').parallax();
-
-
-
     //**transition download page**//
     $("body").css("display", "none");
     $("body").fadeIn(2000);
@@ -145,7 +116,7 @@ $(document).ready(function(){
    //      e.preventDefault();
    //  });
 
-    //**bxSlider to section what we do**//
+    //**bxSlider to section main page**//
     jQuery(function ($) {
         slider = $('.bxslider').bxSlider({
             mode: 'fade',
@@ -182,6 +153,7 @@ $(document).ready(function(){
         tabsPosition: 'horizontal',
         responsive: true
     });
+
     //**tabs portfolio page**//
     $('.tabs-portfolio').pwstabs({
         effect: 'slideleft',
@@ -190,6 +162,7 @@ $(document).ready(function(){
         responsive: true
     });
 
+    //**bxSlider to section services page**//
     jQuery(function ($) {
         slider = $('.slider__certificate').bxSlider({
             mode: 'horizontal',
@@ -218,7 +191,7 @@ $(document).ready(function(){
         // slider.reloadSlider();
     });
 
-
+    //**responsive fancybox**//
     $("[data-fancybox]").fancybox({
         // "padding" : 20,
         // "imageScale" : false,
@@ -233,7 +206,9 @@ $(document).ready(function(){
         // "hideOnContentClick" :false,
         // "centerOnScroll" : false
     });
-
+    $("#iframe").fancybox({
+        'type' : 'iframe'
+    });
 
     //**map disable scroll(метод накладання поверх прозорого діва і по кліку забираємо його)**//
     $('.overlay').click(function() {
@@ -247,19 +222,7 @@ $(document).ready(function(){
     //     $(this).find('a').removeClass('active');
     // });
 
-    // var slideout = new Slideout({
-    //     'panel': document.getElementById('panel'),
-    //     'menu': document.getElementById('menu'),
-    //     'padding': 256,
-    //     'tolerance': 70,
-    //     'easing': 'cubic-bezier(.32,2,.55,.27)'
-    // });
-    //
-    // // Toggle button
-    // document.querySelector('.toggle-button').addEventListener('click', function() {
-    //     slideout.toggle();
-    // });
-
+    //**mobile nav menu**//
     $(function() {
         var slideout = new Slideout({
             'panel': document.getElementById('panel'),
@@ -268,25 +231,35 @@ $(document).ready(function(){
             'tolerance': 70,
             'easing': 'cubic-bezier(.32,2,.55,.27)'
         });
-
         // Toggle button
         document.querySelector('.toggle-button').addEventListener('click', function() {
             slideout.toggle();
         });
     });
 
-    $(function() {
-        $('.navigate__header li a').click(function() {
-            //e.preventDefault();
-            // $(".navigate__header li a").removeClass('active');
-            // $(this).addClass('active');
-            $('.navigate__header li a').each(function() {
-                if (this.href == location.pathname) {
-                    $(this).addClass('active');
-                }
-            });
-        })
+    //**masonry**//
+    var $container = $(".masonry-container");
+    $container.imagesLoaded(function () {
+        $container.masonry({
+            columnWidth: ".item",
+            itemSelector: ".item"
+        });
+        $('.item').imagefill();
     });
+
+        //**change active class in main navbar menu**//
+    // $(function() {
+    //     $('.navigate__header li a').click(function() {
+    //         //e.preventDefault();
+    //         // $(".navigate__header li a").removeClass('active');
+    //         // $(this).addClass('active');
+    //         $('.navigate__header li a').each(function() {
+    //             if (this.href == location.pathname) {
+    //                 $(this).addClass('active');
+    //             }
+    //         });
+    //     })
+    // });
 });
 
 

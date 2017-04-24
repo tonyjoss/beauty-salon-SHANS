@@ -13,7 +13,25 @@
 //     });
 // }
 
-
+// jQuery(function ($) {
+//     // $( function() {
+//     // $('.grid').masonry({
+//     //     // options
+//     //     itemSelector: '.grid-item',
+//     //     columnWidth: 200
+//     // });
+//     // });
+//
+//     var $container = $('.grid');
+//
+//     $container.imagesLoaded( function(){
+//         $container.masonry({
+//             itemSelector : '.item',
+//             columnWidth: 200,
+//             isInitLayout: true
+//         });
+//     });
+// });
 
 
 

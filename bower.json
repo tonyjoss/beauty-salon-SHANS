@@ -16,11 +16,12 @@
     "tests"
   ],
   "dependencies": {
-    "masonry": "^4.1.1",
+    "masonry": "^4.2.0",
     "bootstrap": "^3.3.7",
     "toastr": "^2.1.2",
     "components-font-awesome": "^4.7.0",
     "slick-carousel": "^1.6.0",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "imagesloaded": "^4.1.1"
   }
 }
