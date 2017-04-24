@@ -92,7 +92,7 @@ gulp.task('bower-js', function() {
 		"src/bower/slick-carousel/slick/slick.min.js",
 		"src/bower/pwstabs/assets/jquery.pwstabs.min.js",
 		"src/bower/mislider-master/dist/js/mislider.min.js",
-        "src/bower/bxslider-4/dist/jquery.bxslider.min.js",
+        "src/bower/bxslider-4/dist/jquery.bxslider.js",
         "src/bower/jquery.easing/js/jquery.easing.js",
 		"src/bower/jquery.easing/js/jquery.easing.compatibility.js",
 		"src/bower/imagefill/js/jquery-imagefill.js",

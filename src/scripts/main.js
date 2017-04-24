@@ -191,7 +191,7 @@ $(document).ready(function(){
         // slider.reloadSlider();
     });
 
-    //**responsive fancybox**//
+    //**responsive fancybox tab menu**//
     $("[data-fancybox]").fancybox({
         // "padding" : 20,
         // "imageScale" : false,
@@ -206,6 +206,8 @@ $(document).ready(function(){
         // "hideOnContentClick" :false,
         // "centerOnScroll" : false
     });
+
+    //**responsive fancybox tab menu iframe**//
     $("#iframe").fancybox({
         'type' : 'iframe'
     });
